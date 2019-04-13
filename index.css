@@ -5,14 +5,24 @@ body
     background-color : rgb(10,10,10);
 }
 
-h1,p
+h1
 {
-    text-align: center
+    text-align: center;
+    border-bottom : medium dotted rgb(50,50,50);
+    width : 33%;
+    margin-left : 33%;
+    margin-right : 33%;
+}
+
+p
+{
+    text-align: center;    
 }
 
 table
 {
-    border : medium dotted rgb(50,50,50);
+    border-top : medium dotted rgb(50,50,50);
+    border-bottom : medium dotted rgb(50,50,50);
     padding : 4px;  
     margin-left : 10%;
     margin-right : 10%;
@@ -22,6 +32,7 @@ th
 {
     border-right : medium dotted rgb(50,50,50);
     padding : 10px;
+    font-weight : normal;
 }
 
 td
