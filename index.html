@@ -1,0 +1,114 @@
+<html>
+
+    <head>
+        <title>Test Panda</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </head>
+
+    <script type="text/javascript">
+
+        function changeBackgroundColor( _this ) 
+        {
+            if( _this.style.backgroundColor == "rgb(200, 200, 200)")
+            {
+                _this.style.backgroundColor = "rgb(0, 0, 0)"
+                _this.style.color   = "rgb(0, 0, 0)";
+                 _this.style.border = "rgb(0, 0, 0)";
+            }
+            else 
+            {
+                _this.style.backgroundColor = "rgb(200,200,200)";
+                _this.style.color = "black";
+            }
+        }
+
+    </script>
+
+    <body>
+        <div id="wrapper">
+
+            <h1 id="h1">Test Grid</h1>
+            <p>Come to the panda</p>
+            <p>Simplify your life</p>
+            <p>Click once to highlight</p>
+            <p>Click twice to eliminate</p>
+
+            <p>My new web feature should work with...</p>
+
+            <table class="combo_table">
+                <tr>
+                    <th>Devices...</th>
+                    <td onclick="changeBackgroundColor(this)"> Windows </td>
+                    <td onclick="changeBackgroundColor(this)">OSX</td>
+                    <td onclick="changeBackgroundColor(this)">Android</td>
+                    <td onclick="changeBackgroundColor(this)">iOS</td>
+                    <td onclick="changeBackgroundColor(this)">Fire OS</td>
+                    <td onclick="changeBackgroundColor(this)">C-Cast</td>
+                </tr>
+                <tr>
+                    <th>Browsers...</th>
+                    <td onclick="changeBackgroundColor(this)">Chrome</td>
+                    <td onclick="changeBackgroundColor(this)">Firefox</td>
+                    <td onclick="changeBackgroundColor(this)">Safari</td>
+                    <td onclick="changeBackgroundColor(this)">IE</td>
+                    <td onclick="changeBackgroundColor(this)">Edge</td>
+                    <td onclick="changeBackgroundColor(this)">Silk</td>
+                </tr>
+
+                <tr>
+                    <th>Sites...</th>
+                    <td onclick="changeBackgroundColor(this)">Test</td>
+                    <td onclick="changeBackgroundColor(this)">Production</td>
+                </tr>
+                <tr>
+                    <th>Player...</th>
+                    <td onclick="changeBackgroundColor(this)">HTML</td>
+                    <td onclick="changeBackgroundColor(this)">Hybrid</td>
+                    <td onclick="changeBackgroundColor(this)">360</td>
+                    <td onclick="changeBackgroundColor(this)">FLASH</td>
+                </tr>
+                <tr>
+                    <th>Plugins...</th>
+                    <td onclick="changeBackgroundColor(this)">Continious Play</div></td>
+                    <td onclick="changeBackgroundColor(this)">Ads</div></td>
+                </tr>
+                <tr>
+                    <th>Playlist Object...</th>
+                    <td onclick="changeBackgroundColor(this)">Video</div></td>
+                    <td onclick="changeBackgroundColor(this)">Audio</div></td>
+                    <td onclick="changeBackgroundColor(this)">Load() Video</div></td>
+                    <td onclick="changeBackgroundColor(this)">Load() Audio</div></td>
+                    <td onclick="changeBackgroundColor(this)">Simulcast</div></td>
+                    <td onclick="changeBackgroundColor(this)">Webcast</div></td>
+                    <td onclick="changeBackgroundColor(this)">Ident</div></td>
+                    <td onclick="changeBackgroundColor(this)">Queued</div></td>
+                </tr>
+                <tr>
+                    <th>On player size...</th>
+                    <td onclick="changeBackgroundColor(this)">Default</td>
+                    <td onclick="changeBackgroundColor(this)">Full-screen</td>
+                    <td onclick="changeBackgroundColor(this)">Portait</td>
+                    <td onclick="changeBackgroundColor(this)">Landscape</td>
+                    <td onclick="changeBackgroundColor(this)">Snapped</td>
+                    <td onclick="changeBackgroundColor(this)">Mini-Mode</td>
+                </tr>
+                <tr>
+                    <th>It shouldn't break...</th>
+                    <td onclick="changeBackgroundColor(this)">Subtitles</td>
+                    <td onclick="changeBackgroundColor(this)">Settings</td>
+                    <td onclick="changeBackgroundColor(this)">Full-screen</td>
+                    <td onclick="changeBackgroundColor(this)">Seeking</td>
+                </tr>
+                <tr>
+                    <th>Accessible with...</th>
+                    <td onclick="changeBackgroundColor(this)">Keyboard</td>
+                    <td onclick="changeBackgroundColor(this)">Colour palette</td>
+                    <td onclick="changeBackgroundColor(this)">Slow network </td>
+                    <td onclick="changeBackgroundColor(this)">Screen Readers</td>
+                    <td onclick="changeBackgroundColor(this)">Low spec device</td>
+                    <td onclick="changeBackgroundColor(this)">Clean cache</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
