@@ -38,7 +38,6 @@ th
 td
 {
     padding : 10px;
-    /*border : medium dotted purple;*/
     text-align : center;
     cursor : pointer;
 }
@@ -56,5 +55,12 @@ td:hover
     margin-left : 10%;
     margin-right : 10%;
     padding-bottom : 700px;
-    /*background-color : red;*/
+}
+
+#papyrus
+{
+    height: 33%;
+    width : 33%;
+    margin-left : 33%;
+    margin-right : 33%;
 }
