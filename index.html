@@ -1,46 +1,48 @@
-<html>
-
+<!DOCTYPE html>
     <head>
         <title>Test Panda</title>
         <link rel="stylesheet" type="text/css" href="index.css" />
+        <script type="text/javascript">
+            
+            function changeBackgroundColor( _this ) 
+            {
+                // If the current element background is white
+                if( _this.style.backgroundColor == "rgb(200, 200, 200)")
+                {
+                    _this.style.backgroundColor = "rgb(10, 10, 10)"
+                    _this.style.color = "rgb(10, 10, 10)";
+                    _this.style.border = "rgb(10, 10, 10)";
+                }
+                // Else current element background is black
+                else 
+                {
+                    _this.style.backgroundColor = "rgb(200,200,200)";
+                    _this.style.color = "black";
+                }
+            }
+
+        </script>
     </head>
-
-    <script type="text/javascript">
-
-        function changeBackgroundColor( _this ) 
-        {
-            // If the current element background is white
-            if( _this.style.backgroundColor == "rgb(200, 200, 200)")
-            {
-                _this.style.backgroundColor = "rgb(10, 10, 10)"
-                _this.style.color = "rgb(10, 10, 10)";
-                _this.style.border = "rgb(10, 10, 10)";
-            }
-            // Else current element background is black
-            else 
-            {
-                _this.style.backgroundColor = "rgb(200,200,200)";
-                _this.style.color = "black";
-            }
-        }
-
-    </script>
-
     <body>
         <div id="wrapper">
 
-            <h1 id="h1">Test Panda</h1>
-            <img src="papyrus.png" id="papyrus" alt="Smiley skeleton head">
+            <h1 aria-label="Back to the page" id="h1">Test Panda</h1>
+            <img src="papyrus.png" id="papyrus" alt="A Smiley skeleton head">
 
+            <p>A grid to highlight test coverage required</p>
             <p>Click once to highlight</p>
             <p>Click twice to eliminate</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">Mozilla</a> documentation was heavily used to enhance and learn about accessibility <a target="_blank" href="https://www.google.com/search?q=a11y&oq=a11y&aqs=chrome..69i57j69i61j69i65j0l3.1337j0j7&sourceid=chrome&ie=UTF-8">(A11Y)</p>
+
+            <p><a target="_blank" href="https://jsonformatter.org/html-validator">Here</a> validated HTML</p>
+            <p><a target="_blank" href="https://jigsaw.w3.org/css-validator/">CSS</a> was validated also</p>
 
             <p>My new web feature should work with...</p>
 
-            <table class="combo_table">
+            <table aria-label="start of a table"  class="combo_table">
                 <tr>
                     <th>Devices...</th>
-                    <td onclick="changeBackgroundColor(this)"> Windows </td>
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">Windows</td>
                     <td onclick="changeBackgroundColor(this)">OSX</td>
                     <td onclick="changeBackgroundColor(this)">Android</td>
                     <td onclick="changeBackgroundColor(this)">iOS</td>
@@ -49,7 +51,7 @@
                 </tr>
                 <tr>
                     <th>Browsers...</th>
-                    <td onclick="changeBackgroundColor(this)">Chrome</td>
+                    <td tabindex="0" aria-label="Android button yeah!" onclick="changeBackgroundColor(this)">Chrome</td>
                     <td onclick="changeBackgroundColor(this)">Firefox</td>
                     <td onclick="changeBackgroundColor(this)">Safari</td>
                     <td onclick="changeBackgroundColor(this)">IE</td>
@@ -58,31 +60,31 @@
                 </tr>
                 <tr>
                     <th>Sites...</th>
-                    <td onclick="changeBackgroundColor(this)">Test</td>
+                    <td tabindex="-1" onclick="changeBackgroundColor(this)">Test</td>
                     <td onclick="changeBackgroundColor(this)">Production</td>
                 </tr>
                 <tr>
                     <th>Player...</th>
-                    <td onclick="changeBackgroundColor(this)">HTML</td>
+                    <td><input class='myclass' type='button' aria-label="HTML option button" value="HTML" keydown="changeBackgroundColor(this)" onclick="changeBackgroundColor(this)"/></td>
                     <td onclick="changeBackgroundColor(this)">Hybrid</td>
                     <td onclick="changeBackgroundColor(this)">360</td>
                     <td onclick="changeBackgroundColor(this)">FLASH</td>
                 </tr>
                 <tr>
                     <th>Plugins...</th>
-                    <td onclick="changeBackgroundColor(this)">Continious Play</div></td>
-                    <td onclick="changeBackgroundColor(this)">Ads</div></td>
+                    <td onclick="changeBackgroundColor(this)">Continious Play</td>
+                    <td onclick="changeBackgroundColor(this)">Ads</td>
                 </tr>
                 <tr>
                     <th>Playlist Object...</th>
-                    <td onclick="changeBackgroundColor(this)">Video</div></td>
-                    <td onclick="changeBackgroundColor(this)">Audio</div></td>
-                    <td onclick="changeBackgroundColor(this)">Load() Video</div></td>
-                    <td onclick="changeBackgroundColor(this)">Load() Audio</div></td>
-                    <td onclick="changeBackgroundColor(this)">Simulcast</div></td>
-                    <td onclick="changeBackgroundColor(this)">Webcast</div></td>
-                    <td onclick="changeBackgroundColor(this)">Ident</div></td>
-                    <td onclick="changeBackgroundColor(this)">Queued</div></td>
+                    <td onclick="changeBackgroundColor(this)">Video</td>
+                    <td onclick="changeBackgroundColor(this)">Audio</td>
+                    <td onclick="changeBackgroundColor(this)">Load() Video</td>
+                    <td onclick="changeBackgroundColor(this)">Load() Audio</td>
+                    <td onclick="changeBackgroundColor(this)">Simulcast</td>
+                    <td onclick="changeBackgroundColor(this)">Webcast</td>
+                    <td onclick="changeBackgroundColor(this)">Ident</td>
+                    <td onclick="changeBackgroundColor(this)">Queued</td>
                 </tr>
                 <tr>
                     <th>On player size...</th>
@@ -113,15 +115,3 @@
         </div>
     </body>
 </html>
-
-WILLIAM DALY
-S  A  F  E
-
-A        F
-    ¥
-F        A
-
-E  F  A  S
-
-------O
-l l

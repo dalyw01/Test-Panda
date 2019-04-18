@@ -16,7 +16,12 @@ h1
 
 p
 {
-    text-align: center;    
+    text-align : center;    
+}
+
+a
+{
+    color : white;
 }
 
 table
@@ -47,6 +52,18 @@ td:hover
     background-color : rgb(50,50,50);
 }
 
+input
+{
+    padding : 10px;
+    font-size : 16px; 
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    text-align : center;
+    cursor : pointer;
+    background-color : black;
+    color : white;
+    border-color : black;  
+}
+
 #wrapper
 {
     position : relative;
@@ -55,12 +72,26 @@ td:hover
     margin-left : 10%;
     margin-right : 10%;
     padding-bottom : 700px;
+    background-color: black;
 }
 
 #papyrus
 {
-    height: 33%;
-    width : 33%;
-    margin-left : 33%;
-    margin-right : 33%;
+    display : block;
+    margin-left : auto;
+    margin-right : auto;
+    height : 300px;
+    width : 300px;
+    background-color : black;
 }
+
+
+
+
+
+
+
+
+
+
+
