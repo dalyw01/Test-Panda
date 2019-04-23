@@ -3,7 +3,7 @@
         <title>Test Panda</title>
         <link rel="stylesheet" type="text/css" href="index.css" />
         <script type="text/javascript">
-            
+
             function changeBackgroundColor( _this ) 
             {
                 // If the current element background is white
@@ -29,28 +29,52 @@
             <h1 aria-label="Back to the page" id="h1">Test Panda</h1>
             <img src="papyrus.png" id="papyrus" alt="A Smiley skeleton head">
 
-            <p>A grid to highlight test coverage required</p>
+            <h2>What is this page?</h2>
+            <p>This page is to highlight testing required for a website or feature on a website</p>
+
+            <h2>What else is it?</h2>
+            <p>An excuse for me to learn about accessibility (A11Y) on the web and to improve how I write pages!</p>
+            <p>
+                Also an excuse to read <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">Mozillas</a> 
+                documentation about A11Y (it's really good!)
+            </p>
+
+            <p>
+                <a target="_blank" title="This is a link to a HTML validtating page" href="https://jsonformatter.org/html-validator">Here</a> validated HTML
+            </p>
+
+            <p><a target="_blank" title="This is a link to a CSS validtating page" href="https://jigsaw.w3.org/css-validator/">CSS</a> was validated also</p>
+
+            <h2>Why is it styled this way?</h2>
+            <ol>
+                <li>The black and white to indicate test cases are inspired by a panda</li>
+                <li>It's heavily influenced by one of my favourite games <a target="_blank" href="https://undertale.com/"/>UNDERTALE</a></li>
+            </ol>
+
+            <h2>Now to start testing!</h2>
+            
             <p>Click once to highlight</p>
             <p>Click twice to eliminate</p>
-            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">Mozilla</a> documentation was heavily used to enhance and learn about accessibility (A11Y)</p>
-
-            <p><a target="_blank" href="https://jsonformatter.org/html-validator">Here</a> validated HTML</p>
-            <p><a target="_blank" href="https://jigsaw.w3.org/css-validator/">CSS</a> was validated also</p>
-
             <p>My new web feature should work with...</p>
 
             <table aria-label="start of a table"  class="combo_table">
                 <tr>
                     <th>Devices...</th>
+                    <!-- 
+                        A Tab Index makes a non-focusable element focusable
+                     -->
                     <td tabindex="0" onclick="changeBackgroundColor(this)">Windows</td>
-                    <td onclick="changeBackgroundColor(this)">OSX</td>
-                    <td onclick="changeBackgroundColor(this)">Android</td>
-                    <td onclick="changeBackgroundColor(this)">iOS</td>
-                    <td onclick="changeBackgroundColor(this)">Fire OS</td>
-                    <td onclick="changeBackgroundColor(this)">C-Cast</td>
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">OSX</td>
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">Android</td>
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">iOS</td>
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">Fire OS</td>
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">C-Cast</td>
                 </tr>
                 <tr>
                     <th>Browsers...</th>
+                    <!-- 
+                        Attaching an aria-label means the screen-reader can read something more useful out to the user
+                    -->
                     <td tabindex="0" aria-label="Android button yeah!" onclick="changeBackgroundColor(this)">Chrome</td>
                     <td onclick="changeBackgroundColor(this)">Firefox</td>
                     <td onclick="changeBackgroundColor(this)">Safari</td>
@@ -60,12 +84,26 @@
                 </tr>
                 <tr>
                     <th>Sites...</th>
-                    <td tabindex="-1" onclick="changeBackgroundColor(this)">Test</td>
-                    <td onclick="changeBackgroundColor(this)">Production</td>
+                    <!--   
+                        Giving something a higher tab index higher than 0 is not advisable
+                        It will be given priority by the screen-reader for the whole page.
+                    -->
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">Test</td>
+                    <td tabindex="0" onclick="changeBackgroundColor(this)">Production</td>
+                    <!-- <td tabindex="2"onclick="changeBackgroundColor(this)">Production</td> -->
                 </tr>
                 <tr>
                     <th>Player...</th>
-                    <td><input class='myclass' type='button' aria-label="HTML option button" value="HTML" keydown="changeBackgroundColor(this)" onclick="changeBackgroundColor(this)"/></td>
+                    <!-- 
+                        This is the most correct way to write it 
+                        Putting a BUTTON inside the TD so we don't have to hack anything together
+                        An aria-label has also been attatched for more description
+                        Most of the time you will not need a tab-index, you just need to construct the page correctly
+                        A11Y requires you to be very philisophical and question what is the page and it's components 
+                    -->
+                    <td>
+                        <input class='myclass' type='button' aria-label="HTML option button" value="HTML" keydown="changeBackgroundColor(this)" onclick="changeBackgroundColor(this)"/>
+                    </td>
                     <td onclick="changeBackgroundColor(this)">Hybrid</td>
                     <td onclick="changeBackgroundColor(this)">360</td>
                     <td onclick="changeBackgroundColor(this)">FLASH</td>
