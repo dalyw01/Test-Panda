@@ -47,8 +47,8 @@
 
             <h2>Why is it styled this way?</h2>
             <ol>
-                <li>The black and white to indicate test cases are inspired by a panda</li>
-                <li>It's heavily influenced by one of my favourite games <a target="_blank" href="https://undertale.com/"/>UNDERTALE</a></li>
+                <li>The black and white to highlight test cases are inspired by a panda</li>
+                <li>It's heavily influenced by one of my favourite games <a target="_blank" title="This is a link to an awesome game Undertale" href="https://undertale.com/"/>UNDERTALE</a></li>
             </ol>
 
             <h2>Now to start testing!</h2>
@@ -62,92 +62,231 @@
                     <th>Devices...</th>
                     <!-- 
                         A Tab Index makes a non-focusable element focusable
+                        Like a <td> for example
+                        Focusable elements by default on a browser include a, button, href, iframe and more!
                      -->
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">Windows</td>
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">OSX</td>
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">Android</td>
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">iOS</td>
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">Fire OS</td>
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">C-Cast</td>
-                </tr>
-                <tr>
-                    <th>Browsers...</th>
+                    <td tabindex="0" keydown="changeBackgroundColor(this)" onclick="changeBackgroundColor(this)">Windows</td>
                     <!-- 
                         Attaching an aria-label means the screen-reader can read something more useful out to the user
+                        It will now read the aria-label before the "OSX" part
                     -->
-                    <td tabindex="0" aria-label="Android button yeah!" onclick="changeBackgroundColor(this)">Chrome</td>
-                    <td onclick="changeBackgroundColor(this)">Firefox</td>
-                    <td onclick="changeBackgroundColor(this)">Safari</td>
-                    <td onclick="changeBackgroundColor(this)">IE</td>
-                    <td onclick="changeBackgroundColor(this)">Edge</td>
-                    <td onclick="changeBackgroundColor(this)">Silk</td>
-                </tr>
-                <tr>
-                    <th>Sites...</th>
-                    <!--   
-                        Giving something a higher tab index higher than 0 is not advisable
-                        It will be given priority by the screen-reader for the whole page.
-                    -->
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">Test</td>
-                    <td tabindex="0" onclick="changeBackgroundColor(this)">Production</td>
-                    <!-- <td tabindex="2"onclick="changeBackgroundColor(this)">Production</td> -->
-                </tr>
-                <tr>
-                    <th>Player...</th>
+                    <td tabindex="0" aria-label="Apple OSX option" keydown="changeBackgroundColor(this)" onclick="changeBackgroundColor(this)">OSX</td>
                     <!-- 
-                        This is the most correct way to write it 
+                        Giving something a higher tab index higher than 0 is not advisable
+                        It will be given priority by the screen-reader for the whole page
+                    -->
+                    <td tabindex="0" aria-label="Android option" keydown="changeBackgroundColor(this)" onclick="changeBackgroundColor(this)">Android</td>
+                    <!--
+                        This is the most correct way to write what we want to do
                         Putting a BUTTON inside the TD so we don't have to hack anything together
                         An aria-label has also been attatched for more description
                         Most of the time you will not need a tab-index, you just need to construct the page correctly
                         A11Y requires you to be very philisophical and question what is the page and it's components 
                     -->
                     <td>
-                        <input class='myclass' type='button' aria-label="HTML option button" value="HTML" keydown="changeBackgroundColor(this)" onclick="changeBackgroundColor(this)"/>
+                        <input class="device_option" type="button" value="iOS" aria-label="iOS option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
                     </td>
-                    <td onclick="changeBackgroundColor(this)">Hybrid</td>
-                    <td onclick="changeBackgroundColor(this)">360</td>
-                    <td onclick="changeBackgroundColor(this)">FLASH</td>
+                    <td>
+                        <input class="device_option" type="button" value="Chrome Cast" aria-label="Chrome cast option"
+                        keydown="changeBackgroundColor(this)"
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="device_option" type="button" value="Fire OS" aria-label="Fire OS option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Browsers...</th>
+                     <td>
+                        <input class="browser_option" type="button" value="Chrome" aria-label="Chrome option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="browser_option" type="button" value="Firefox" aria-label="Firefox option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="browser_option" type="button" value="Safari" aria-label="Safari option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="browser_option" type="button" value="IE" aria-label="IE option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="browser_option" type="button" value="Edge" aria-label="Edge option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="browser_option" type="button" value="Silk" aria-label="Silk option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Sites...</th>
+                     <td>
+                        <input class="site_option" type="button" value="Test" aria-label="Test page option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="site_option" type="button" value="Production" aria-label="Production page option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Player...</th>
+                     <td>
+                        <input class="player_option" type="button" value="HTML" aria-label="HTML player option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="player_option" type="button" value="FLASH" aria-label="FLASH player option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="player_option" type="button" value="360" aria-label="360 player option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="player_option" type="button" value="FLASH" aria-label="FLASH player option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
                 </tr>
                 <tr>
                     <th>Plugins...</th>
-                    <td onclick="changeBackgroundColor(this)">Continious Play</td>
-                    <td onclick="changeBackgroundColor(this)">Ads</td>
+                     <td>
+                        <input class="plugin_option" type="button" value="Continious Play" aria-label="Continious Play plugin option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="plugin_option" type="button" value="Advertisements" aria-label="Advertisements plugin option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
                 </tr>
                 <tr>
-                    <th>Playlist Object...</th>
-                    <td onclick="changeBackgroundColor(this)">Video</td>
-                    <td onclick="changeBackgroundColor(this)">Audio</td>
-                    <td onclick="changeBackgroundColor(this)">Load() Video</td>
-                    <td onclick="changeBackgroundColor(this)">Load() Audio</td>
-                    <td onclick="changeBackgroundColor(this)">Simulcast</td>
-                    <td onclick="changeBackgroundColor(this)">Webcast</td>
-                    <td onclick="changeBackgroundColor(this)">Ident</td>
-                    <td onclick="changeBackgroundColor(this)">Queued</td>
+                    <th>Playlist...</th>
+                     <td>
+                        <input class="object_option" type="button" value="Video" aria-label="Video object option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="object_option" type="button" value="Audio" aria-label="Audio object option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="object_option" type="button" value="Load" aria-label="Load object option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="object_option" type="button" value="Simulcast" aria-label="Simulcast object option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="object_option" type="button" value="Webcast" aria-label="Webcast object option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="object_option" type="button" value="Ident" aria-label="Ident object option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="object_option" type="button" value="Queued" aria-label="Queued object option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
                 </tr>
                 <tr>
-                    <th>On player size...</th>
-                    <td onclick="changeBackgroundColor(this)">Default</td>
-                    <td onclick="changeBackgroundColor(this)">Full-screen</td>
-                    <td onclick="changeBackgroundColor(this)">Portait</td>
-                    <td onclick="changeBackgroundColor(this)">Landscape</td>
-                    <td onclick="changeBackgroundColor(this)">Snapped</td>
-                    <td onclick="changeBackgroundColor(this)">Mini-Mode</td>
+                    <th>Size...</th>
+                     <td>
+                        <input class="size_option" type="button" value="Default" aria-label="Default option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="size_option" type="button" value="Fullscreen" aria-label="Fullscreen option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="size_option" type="button" value="Portrait" aria-label="Portrait option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="size_option" type="button" value="Landscape" aria-label="Landscape option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
                 </tr>
                 <tr>
-                    <th>It shouldn't break...</th>
-                    <td onclick="changeBackgroundColor(this)">Subtitles</td>
-                    <td onclick="changeBackgroundColor(this)">Settings</td>
-                    <td onclick="changeBackgroundColor(this)">Full-screen</td>
-                    <td onclick="changeBackgroundColor(this)">Seeking</td>
+                    <th>Controls...</th>
+                     <td>
+                        <input class="control_option" type="button" value="Subtitles" aria-label="Subtitles option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="control_option" type="button" value="Settings" aria-label="Settings option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="seeking_option" type="button" value="Seeking" aria-label="Seeking option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
                 </tr>
                 <tr>
-                    <th>A11Y checks...</th>
-                    <td onclick="changeBackgroundColor(this)">Keyboard</td>
-                    <td onclick="changeBackgroundColor(this)">Colour palette</td>
-                    <td onclick="changeBackgroundColor(this)">Slow network </td>
-                    <td onclick="changeBackgroundColor(this)">Screen Readers</td>
-                    <td onclick="changeBackgroundColor(this)">Low spec device</td>
-                    <td onclick="changeBackgroundColor(this)">Clean cache</td>
+                    <th>A11Y...</th>
+                     <td>
+                        <input class="accessibility_option" type="button" value="Keyboard" aria-label="Keyboard option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="accessibility_option" type="button" value="Colour Contrast" aria-label="Colour contrast option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="accessibility_option" type="button" value="Slow Network" aria-label="Slow network option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="accessibility_option" type="button" value="Screen Reader" aria-label="Screen Reader option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
+                     <td>
+                        <input class="accessibility_option" type="button" value="Low Spec Device" aria-label="Colour contrast option"
+                        keydown="changeBackgroundColor(this)" 
+                        onclick="changeBackgroundColor(this)"/>
+                    </td>
                 </tr>
             </table>
         </div>
